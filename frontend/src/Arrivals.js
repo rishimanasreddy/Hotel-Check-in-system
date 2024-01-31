@@ -1,6 +1,6 @@
 import React from 'react'
 import Data from './data.json'
-
+import 'bootstrap/dist/css/bootstrap.css'
 const d = new Date();
 let date=d.toString()
 function Arrivals() {
@@ -9,7 +9,7 @@ function Arrivals() {
     <div>
     <div><h3>{date}</h3></div>
 
-    <div><table>
+    <div><table className='table'>
       <thead>
       <th>ID</th>
       <th>Name</th>
