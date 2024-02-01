@@ -23,7 +23,7 @@ function Arrivals() {
   return (
 
     <div>
-    <div>
+    <div className='head'>
     <h2>Arrivals</h2>
     <p>{date}</p>
     </div>
@@ -31,25 +31,25 @@ function Arrivals() {
     
   <div className = "Container">
     <table className='table table-bordered'>
-      <thead>
+      <thead className='thead'>
       <th>Name</th>
       <th>Room Type</th>
       <th>Check-IN</th>
       <th>Check-Out</th>
       <th>Length Of Stay</th>
       <th>Confirmation Number</th>
-      <th></th>
+      <th ></th>
       </thead>
       <tbody>
         {records.map((d,i) => (
-          <tr key = {i}>
+          <tr key = {i}  >
             <td>{d.Name}</td>
             <td>{d.RT}</td>
             <td>{d.CI}</td>
             <td>{d.CO}</td>
             <td>{d.LOS}</td>
             <td>{d.CN}</td>
-            <td><button>Check-In</button></td>
+            <td ><button className="btn btn-success" id='checkin'>Check-In</button></td>
           </tr>
         ))}
       </tbody>
